@@ -1,4 +1,3 @@
-import 'package:app/core/app_images.dart';
 import 'package:flutter/material.dart';
 
 class BootcampWidget extends StatelessWidget {
@@ -24,7 +23,7 @@ class BootcampWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               child: Image.asset(
                 image,
-                width: 200,
+                width: 210,
               ),
             ),
             SizedBox(

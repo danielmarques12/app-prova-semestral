@@ -1,19 +1,13 @@
 import 'package:app/core/app_gradients.dart';
-import 'package:app/core/app_images.dart';
-import 'package:app/pages/bootcampsList/bootcampsList_page.dart';
 import 'package:app/shared/button_popup_widget.dart';
-import 'package:app/shared/button_redirect_widget.dart';
-import 'package:app/shared/subscription_popup_widget.dart';
 import 'package:flutter/material.dart';
 
-class BootcampInfoPage extends StatefulWidget {
-  @override
-  _BootcampInfoPageState createState() => _BootcampInfoPageState();
-}
+class BootcampInfoPage extends StatelessWidget {
+  BootcampInfoPage(this.name, this.image, this.description);
 
-class _BootcampInfoPageState extends State<BootcampInfoPage> {
-  final String description =
-      "Aprenda React Js, Redux, Webpack, Redux-Form, MongoDB, Express, Node Vários exercícios práticos e Duas Apps do ZERO!";
+  final String description;
+  final String name;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +19,7 @@ class _BootcampInfoPageState extends State<BootcampInfoPage> {
             child: Column(
               children: [
                 Text(
-                  "Imersão React",
+                  name,
                   style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
@@ -35,7 +29,7 @@ class _BootcampInfoPageState extends State<BootcampInfoPage> {
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(25),
-                      child: Image.asset(AppImages.react)),
+                      child: Image.asset(image)),
                 ),
                 SizedBox(
                   height: 20,

@@ -13,7 +13,18 @@ class BootcampsListPage extends StatefulWidget {
 }
 
 class _BootcampsListPageState extends State<BootcampsListPage> {
-  final Widget redirect = BootcampInfoPage();
+  final Widget redirectReact = BootcampInfoPage(
+      "Imersão React",
+      AppImages.react,
+      "O principal objetivo de um desenvolvedor de software é sem dúvida construir aplicações, então venha aprender conosco.");
+  final Widget redirectBackend = BootcampInfoPage(
+      "Back-end com Node",
+      AppImages.backend,
+      "Aprenda a desenvolver aplicações web com esse curso completo de NodeJS e MongoDB, um curso 100% prático.");
+  final Widget redirectAgil = BootcampInfoPage(
+      "Metodologias ágeis",
+      AppImages.agile,
+      "SEM DÚVIDA, este é o curso de SCRUM (Scrum Agile) mais simples, completo, prático e objetivo que você encontrará na internet.");
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +46,12 @@ class _BootcampsListPageState extends State<BootcampsListPage> {
                   mainAxisSpacing: 15,
                   crossAxisCount: 1,
                   children: [
-                    BootcampWidget(redirect, "Imersão React", AppImages.react),
                     BootcampWidget(
-                        redirect, "Backend avançado", AppImages.backend),
+                        redirectReact, "Imersão React", AppImages.react),
                     BootcampWidget(
-                        redirect, "Metodologias ágeis", AppImages.agile),
+                        redirectBackend, "Backend com Node", AppImages.backend),
+                    BootcampWidget(
+                        redirectAgil, "Metodologias ágeis", AppImages.agile),
                   ],
                 ),
                 Padding(
